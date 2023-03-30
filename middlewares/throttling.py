@@ -33,5 +33,7 @@ class ThrottlingMiddleware(BaseMiddleware):
             raise CancelHandler()
 
     async def message_throttled(self, message: types.Message, throttled: Throttled):
+        
         if throttled.exceeded_count <= 2:
-            await message.reply("Too many requests!")
+            await message.reply("Bir vaqtda ko'p xabar yuborish mumkin emas!\n"\
+                                "Невозможно отправить несколько сообщений одновременно!")
