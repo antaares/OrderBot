@@ -18,7 +18,7 @@ async def bot_start(message: types.Message, state: FSMContext):
         await state.finish()
     text_uz = f"Assalomu alaykum, «Ozodaxon» dizaynerlik kursiga xush kelibsiz!\n"
     text_ru = f"Здравствуйте, добро пожаловать в дизайнерские курсы «Ozodaxon»!\n"
-    text_en = f"Hello, welcome to «Ozodaxon» design courses!\n"
+    
     lang_text = "Tilni tanlang: / Выберите язык:"
     db.add_user(message.from_user.id, message.from_user.full_name, "uz")
 
