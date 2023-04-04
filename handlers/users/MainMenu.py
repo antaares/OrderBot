@@ -292,8 +292,9 @@ async def phone_number(message: types.Message, state: FSMContext):
     await message.answer(text=text, reply_markup= await create_main_buttons(lang))
     
     data = await state.get_data()
-    await send_to_admin(data)
     await state.finish()
+    await send_to_admin(data)
+    
 
 
 
